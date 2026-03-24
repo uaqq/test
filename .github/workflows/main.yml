@@ -1,0 +1,13 @@
+name: Greengage CI
+
+on:
+  push:
+    branches: ['main']  # Trigger on push to main (after merged PR)
+
+jobs:
+  build:
+    name: test-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: just echo
+        run: cat /etc/os-release
