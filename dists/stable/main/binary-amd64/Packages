@@ -1,0 +1,32 @@
+Package: sigar
+Priority: optional
+Section: misc
+Installed-Size: 491
+Maintainer: arenadata
+Architecture: all
+Version: 1.6.5-4618+git2932df5
+Filename: pool/main/s/sigar/sigar_1.6.5-4618+git2932df5_all.deb
+Size: 183328
+MD5sum: e02a922ef2400e29a29b4079d86b6dec
+SHA1: 82558172e5806dad7a9c4b55dea52505fb9c8751
+SHA256: 919d3b1a2daa52b496ea30cc774a8fdf86a16f4ce2df7b4f2ddc15748fcef9d6
+SHA512: 03546a69040a9fc8544e395a824865edb8b349a45820d4c1ae310b36fe1db8355af4f0aacbad63a3fb796d44968a5ec67d961f5b1991604d6eebff44e6f8ac9f
+Description: Hyperic Sigar
+
+Package: sigar-headers
+Priority: optional
+Section: misc
+Installed-Size: 71
+Maintainer: arenadata
+Architecture: all
+Source: sigar
+Version: 1.6.5-4618+git2932df5
+Depends: sigar (= 1.6.5-4618+git2932df5)
+Filename: pool/main/s/sigar/sigar-headers_1.6.5-4618+git2932df5_all.deb
+Size: 13032
+MD5sum: cc3031a51658ec56118bdc882980da89
+SHA1: 5f5dc092367ef3e3e5c45322befeaa6dadd666d7
+SHA256: 4a2f8578254395c12d065f6d5e7b39b4983b5fa16d3e605b3162789139a5a53b
+SHA512: faa0f292d20d6e9f2aff7eab5070f3bd83c933b5d1be8e79446deec2931fb71adc445998d36d4b28a0588ddef4bcbb43f651d91305184a6e4e09e8a3142514c7
+Description: Sigar Header Files
+
