@@ -21,7 +21,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh run list --workflow "Build CI" --limit 100 \
+          result=$(gh run list --workflow "Build CI" --limit 100 \
             --json conclusion,headSha,event,headBranch,url,status \
             --jq '
               map(select(
@@ -30,4 +30,5 @@ jobs:
                 .headBranch == "'"${{ github.event.release.tag_name }}"'"
               )) |
               .[0]
-            '
+            ')
+          echo $result
