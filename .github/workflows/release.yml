@@ -1,0 +1,29 @@
+name: Build APT repo
+
+on:
+  release:
+    types: [released]
+
+permissions:
+  contents: write
+  
+jobs:
+  repo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install tools
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh run list --workflow "$WORKFLOW" --limit 100 \
+            --json conclusion,headSha,event,headBranch,url,status \
+            --jq '
+              map(select(
+                .headSha == "'"${{ github.sha }}"'" and 
+                .event == "push" and 
+                .headBranch == "'"${{ github.event.release.tag_name }}"'"
+              )) |
+              .[0]
+            '
