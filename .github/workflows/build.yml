@@ -7,5 +7,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    run: |
-      echo "OK"
+    steps:
+      - name: Print ok
+        run: |
+          echo "ok"
